@@ -25,12 +25,12 @@ def get_gpt3_reply(text):
 def get_gpt3dot5_reply(text):
     print("Calling gpt-3.5-turbo API...")
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4o",
         messages=[
             {"role": "user", "content": text}
         ],
         max_tokens=max_tokens,
-        temperature=0.8
+        temperature=0.7
     )
     return response.choices[0].message.content.strip()
 
